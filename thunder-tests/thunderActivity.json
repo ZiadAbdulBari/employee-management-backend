@@ -1,0 +1,132 @@
+[
+  {
+    "_id": "5b1b32fb-d9f0-4da1-b567-bc0699b48172",
+    "colId": "history",
+    "containerId": "",
+    "name": "registration",
+    "url": "{{url}}/auth/registration/?id=123",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-12T05:44:53.721Z",
+    "modified": "2023-05-19T10:21:12.144Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "123",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"a@a.com\",\n  \"password\":\"Admin\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3c3a69bf-0eb8-45b1-ac48-c6370d39703d",
+    "colId": "history",
+    "containerId": "",
+    "name": "login",
+    "url": "{{url}}/auth/login",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-12T08:12:18.651Z",
+    "modified": "2023-05-12T14:39:59.729Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"a@a.com\",\n  \"password\": \"Admin\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "19f5b30a-1dee-46f6-bdfa-0d79882e47e4",
+    "colId": "history",
+    "containerId": "",
+    "name": "add-employee",
+    "url": "{{url}}/employee/add-employee/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-12T19:24:08.446Z",
+    "modified": "2023-05-19T10:01:04.554Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"firstName\":\"Ahnaf\",\n  \"lastName\":\"Bari\",\n  \"email\":\"zbari@iquantile.com\",\n  \"salary\":\"28000\",\n  \"role\":\"It officer\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "a388f81f-20f6-4fe4-9a6a-94334edc549d",
+    "colId": "history",
+    "containerId": "",
+    "name": "checkin",
+    "url": "{{url}}/employee/checkin/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-18T16:04:57.889Z",
+    "modified": "2023-05-18T17:25:15.794Z",
+    "headers": [
+      {
+        "name": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWUxMWFkZmMxNzRjYjk2MTQ5Yjg2OCIsImVtYWlsIjoiYUBhLmNvbSIsImlhdCI6MTY4NDQyNTg3Nn0.cSXW8zdYJkMn5R_i17Qk0rfr_zBL7JmekV8Cjbcw_9Q"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"check_in\":\"8:10am\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d716312f-103c-40eb-89c1-1cfeaaaa88bf",
+    "colId": "history",
+    "containerId": "",
+    "name": "checkout",
+    "url": "{{url}}/employee/checkout/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-18T16:04:57.889Z",
+    "modified": "2023-05-19T02:15:48.696Z",
+    "headers": [
+      {
+        "name": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWUxMWFkZmMxNzRjYjk2MTQ5Yjg2OCIsImVtYWlsIjoiYUBhLmNvbSIsImlhdCI6MTY4NDQyNTg3Nn0.cSXW8zdYJkMn5R_i17Qk0rfr_zBL7JmekV8Cjbcw_9Q"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"check_out\":\"8:10am\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e5b80fff-30bf-44f2-9e55-1733714cbe4f",
+    "colId": "history",
+    "containerId": "",
+    "name": "create todo",
+    "url": "{{url}}/todo/create-todo/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-19T08:57:39.656Z",
+    "modified": "2023-05-19T09:02:26.567Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\":\"Test\",\n  \"description\":\"Test todo\",\n  \"assign_to\":\"64651274f8a01d36e5206384\",\n  \"project_name\":\"Quantibly\",\n  \"issue_date\":\"2023-05-19\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
