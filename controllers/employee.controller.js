@@ -13,21 +13,20 @@ const addEmployee = async (req,res)=>{
         const findEmail = await Employee.findOne({email:req.body.email});
         const id = findEmail.id;
         let transporter = await nodemailer.createTransport({
-            service: 'gmail', // true for 465, false for other ports
+            service: 'gmail',
             auth: {
-              user: 'ziadabdulbari01@gmail.com', // generated ethereal user
-              pass: 'zstvrrpqyxuuuvxn', // generated ethereal password
+              user: 'ziadabdulbari01@gmail.com',
+              pass: 'zstvrrpqyxuuuvxn',
             },
         });
         let data = await transporter.sendMail({
-        from: 'ziadabdulbari01@gmail.com', // sender address
-        to: req.body.email, // list of receivers
-        subject: "Hello ✔", // Subject line
-        text: "Hello world?", // plain text body
-        html: "<a href='https://www.facebook.com/'>Signup</a>", // html body
+        from: 'ziadabdulbari01@gmail.com',
+        to: req.body.email,
+        subject: "Signup Invitation",
+        text: "Hello world?",
+        html: `<a href=http://localhost:5173/registration/?id=${id}>Signup</a>`,
         });
-       transporter.sendMail(data).then(async (info)=>{
-            console.log(info);
+       transporter.sendMail(data).then(async ()=>{
             return res.status(200).json({
                 message:"Invitation sent"
             })

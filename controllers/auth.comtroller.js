@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const registration = async (req,res)=>{
     let email = req.body.email
-    if(req.query.id){
+    if(req.query.id!=''){
         let employee = await Employee.findOne({_id:req.query.id})
         email = employee.email;
     }
@@ -31,7 +31,7 @@ const registration = async (req,res)=>{
     catch(error){
         return res.status(500).json({
             "status":500,
-            "mgs":"server error",
+            "mgs":error,
         })
     }
 }
