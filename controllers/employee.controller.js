@@ -28,7 +28,7 @@ const addEmployee = async (req,res)=>{
         });
        transporter.sendMail(data).then(async ()=>{
             return res.status(200).json({
-                message:"Invitation sent"
+                message:"Invitation sent. Please check email."
             })
         })
     }
@@ -39,4 +39,33 @@ const addEmployee = async (req,res)=>{
         })
     }
 }
+const employeeList = async (req,res)=>{
+    try{
+        const list = await Employee.find();
+        return res.status(200).json({
+            "employeeList":list
+        })
+    }
+    catch(error){
+        return res.status(500).json({
+            message:error,
+        })
+    }
+}
+const userDetails = async (req,res)=>{
+    try{
+        const details = await Employee.findOne({employee_id:req.params.id});
+        res.status(200).json({
+            "details":details
+        })
+
+    }
+    catch(error){
+        res.status(500).json({
+            "message":error,
+        })
+    }
+}
 module.exports.addEmployee = addEmployee;
+module.exports.employeeList = employeeList;
+module.exports.userDetails = userDetails;

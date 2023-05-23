@@ -23,6 +23,11 @@ const registration = async (req,res)=>{
     })
     try{
         await user.save();
+        const newUser = await Auth.findOne({email:email});
+        const newEmployee = await Employee.findOne({email:email});
+        const employeeId = newUser._id;
+        newEmployee.employee_id = employeeId;
+        await newEmployee.save();
         return res.status(200).json({
             "status":200,
             "mgs":"successfully created",
