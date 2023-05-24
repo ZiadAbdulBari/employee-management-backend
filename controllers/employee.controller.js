@@ -54,9 +54,9 @@ const employeeList = async (req,res)=>{
 }
 const userDetails = async (req,res)=>{
     try{
-        const details = await Employee.findOne({employee_id:req.params.id});
-        res.status(200).json({
-            "details":details
+        const details = await Employee.findOne({employee_id:req.id});
+        return res.status(200).json({
+            details
         })
 
     }

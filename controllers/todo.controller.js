@@ -20,18 +20,42 @@ const makeTodo = async (req,res)=>{
         })
     }
 }
-const updateTodo = (req,res)=>{
+const updateTodo = async (req,res)=>{
+    try{
+        const selectedTodo = await Todo.findOne({_id:req.params.id});
+        if(selectedTodo.start_time==null && selectedTodo.finish_time==null){
+            selectedTodo.start_time = req.body.time;
+            await selectedTodo.save();
+            return res.status(200).json({
+                message:"You are started this task."
+            })
+        }
+        else if(selectedTodo.start_time!=null && selectedTodo.finish_time==null){
+            selectedTodo.start_time = req.body.time;
+            selectedTodo.is_done = true;
+            await selectedTodo.save();
+            return res.status(200).json({
+                message:"Congratulation! You are successfully completed this task."
+            })
+        }
 
+    }
+    catch(error){
+        console.log(error);
+        return res.status(500).json({
+            message:"Sorry! Something went wrong."
+        })
+    }
 }
 const todoList = async (req,res)=>{
     try{
         let todos="";
-        const role = await Employee.findOne({employee_id:req.params.id});
+        const role = await Employee.findOne({employee_id:req.id});
         if(role=='project_manager' || role=='tech_lead' || role=='CTO'){
             todos = await Todo.find();
         }
         else{
-            todos = await Todo.find({employee_id:req.params.id});
+            todos = await Todo.find({assign_to:req.id});
         }
         res.status(200).json({
             "all_task":todos

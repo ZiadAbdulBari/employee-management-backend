@@ -42,13 +42,12 @@ const registration = async (req,res)=>{
 }
 const login = async (req,res)=>{
     try{
-        // const email = req.body.email;
         const checkEmail = await Auth.find({email:req.body.email});
         if(checkEmail.length>0){
-            // const hashedPass = await bcrypt.hash(req.body.password, 10);
             const checkPassword = await bcrypt.compare(req.body.password,checkEmail[0].password);
             if(checkPassword){
                 const token = jwt.sign({ id: checkEmail[0]._id, email: checkEmail[0].email }, process.env.JWT_TOKEN);
+                // console.log(token)
                 res.status(200).json({
                     "access_token": token,
                     "mgs": "logged in",

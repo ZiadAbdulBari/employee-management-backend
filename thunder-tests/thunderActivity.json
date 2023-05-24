@@ -33,12 +33,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-05-12T08:12:18.651Z",
-    "modified": "2023-05-12T14:39:59.729Z",
+    "modified": "2023-05-24T02:21:33.975Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\": \"a@a.com\",\n  \"password\": \"Admin\"\n}",
+      "raw": "{\n  \"email\": \"cagivop430@farebus.com\",\n  \"password\": \"Admin\"\n}",
       "form": []
     },
     "tests": []
@@ -148,11 +148,11 @@
     "colId": "history",
     "containerId": "",
     "name": "todo list",
-    "url": "{{url}}/todo/list-todo/646c5bdca21b39eac37d3df8/Interm",
+    "url": "{{url}}/todo/list-todo/",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-05-23T09:13:30.939Z",
-    "modified": "2023-05-23T09:13:30.939Z",
+    "modified": "2023-05-24T12:27:41.424Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -162,12 +162,17 @@
     "colId": "history",
     "containerId": "",
     "name": "details",
-    "url": "{{url}}/employee/user-details/646c6d0aa21b39eac37d3e12",
+    "url": "{{url}}/employee/user-details/",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-05-23T09:45:24.149Z",
-    "modified": "2023-05-23T09:45:24.149Z",
-    "headers": [],
+    "modified": "2023-05-24T02:23:06.243Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmM1YmRjYTIxYjM5ZWFjMzdkM2RmOCIsImVtYWlsIjoiY2FnaXZvcDQzMEBmYXJlYnVzLmNvbSIsImlhdCI6MTY4NDg5NDg5M30.f_tKBMxGj9Gy9D1mmXYKQPoFoLXoF2I8EW6osZHeEQo"
+      }
+    ],
     "params": [],
     "tests": []
   }

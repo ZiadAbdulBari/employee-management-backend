@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const tokenChecker =async (req,res,next)=>{
-    const token = req.headers.token;
+    const token = req.headers.authorization;
     try{
         const decode = await jwt.verify(token, process.env.JWT_TOKEN);
         const {id,email} = decode;
