@@ -1,6 +1,6 @@
 const express = require('express');
 const route = express.Router();
-const {makeTodo,updateTodo, todoList} = require('../controllers/todo.controller');
+const {makeTodo,updateTodo, todoList} = require('../controllers/task.controller');
 const tokenChecker = require('../middleware/tokenChecker');
 route.post('/create-todo/',makeTodo);
 route.post('/update-todo/:id/',tokenChecker,updateTodo);

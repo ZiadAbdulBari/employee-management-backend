@@ -11,12 +11,12 @@ app.use(bodyParser.json())
 const auth = require('./routes/auth.route');
 const employee = require('./routes/employee.route');
 const attendance = require('./routes/attendance.route');
-const todo = require('./routes/todo.route');
+const task = require('./routes/task.route');
 
 app.use('/api/auth', auth);
 app.use('/api/auth',auth);
 app.use('/api/employee',employee);
-app.use('/api/todo',todo);
+app.use('/api/todo',task);
 app.use('/api/employee',attendance);
 
 

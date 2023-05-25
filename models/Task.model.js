@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const {Schema,model} = mongoose;
-const todoList = new Schema({
+const task = new Schema({
     title:{
         type:String,
         required:true,
@@ -38,4 +38,4 @@ const todoList = new Schema({
         default:false
     },
 })
-module.exports = new model('TodoList',todoList);
+module.exports = new model('Task',task);

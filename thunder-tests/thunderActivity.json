@@ -4,22 +4,22 @@
     "colId": "history",
     "containerId": "",
     "name": "registration",
-    "url": "{{url}}/auth/registration/?id=123",
+    "url": "{{url}}/auth/registration/?id=false",
     "method": "POST",
     "sortNum": 0,
     "created": "2023-05-12T05:44:53.721Z",
-    "modified": "2023-05-19T10:21:12.144Z",
+    "modified": "2023-05-25T10:02:09.538Z",
     "headers": [],
     "params": [
       {
         "name": "id",
-        "value": "123",
+        "value": "false",
         "isPath": false
       }
     ],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\":\"a@a.com\",\n  \"password\":\"Admin\"\n}",
+      "raw": "{\n  \"email\":\"h@h.com\",\n  \"password\":\"Admin\"\n}",
       "form": []
     },
     "tests": []
@@ -167,6 +167,25 @@
     "sortNum": 0,
     "created": "2023-05-23T09:45:24.149Z",
     "modified": "2023-05-24T02:23:06.243Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmM1YmRjYTIxYjM5ZWFjMzdkM2RmOCIsImVtYWlsIjoiY2FnaXZvcDQzMEBmYXJlYnVzLmNvbSIsImlhdCI6MTY4NDg5NDg5M30.f_tKBMxGj9Gy9D1mmXYKQPoFoLXoF2I8EW6osZHeEQo"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "becc1ecd-0371-443a-a507-0b31d8561393",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{url}}/employee/load-profile/",
+    "url": "{{url}}/employee/load-profile/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-25T05:55:21.480Z",
+    "modified": "2023-05-25T05:55:21.480Z",
     "headers": [
       {
         "name": "Authorization",

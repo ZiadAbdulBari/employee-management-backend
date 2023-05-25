@@ -1,8 +1,10 @@
 const express = require('express');
 const route = express.Router();
-const {addEmployee,employeeList, userDetails} = require('../controllers/employee.controller');
+const {addEmployee,employeeList, userDetails, updateEmployeeProfile, LoadProfileData} = require('../controllers/employee.controller');
 const tokenChecker = require('../middleware/tokenChecker');
 route.post('/add-employee/',addEmployee);
 route.get('/list-employee/',tokenChecker,employeeList);
 route.get('/user-details/',tokenChecker,userDetails);
+route.get('/load-profile/',tokenChecker,LoadProfileData);
+route.post('/update-profile/',tokenChecker,updateEmployeeProfile);
 module.exports = route;

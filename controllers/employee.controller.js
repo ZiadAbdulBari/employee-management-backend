@@ -1,4 +1,5 @@
 const Employee = require('../models/Employee.model');
+const Profile = require("../models/Profile.model");
 const nodemailer = require("nodemailer");
 const addEmployee = async (req,res)=>{
     try{
@@ -11,7 +12,8 @@ const addEmployee = async (req,res)=>{
         })
         await newEmployee.save();
         const findEmail = await Employee.findOne({email:req.body.email});
-        const id = findEmail.id;
+        const id = findEmail._id;
+        console.log(id)
         let transporter = await nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -66,6 +68,41 @@ const userDetails = async (req,res)=>{
         })
     }
 }
+const updateEmployeeProfile = async(req,res)=>{
+    try{
+        const profile = await Profile.findOne({employee_id:req.id});
+        profile.NID = req.body.nid;
+        profile.contact_number = req.body.contact_number;
+        profile.emargency_contact_number = req.body.emargency_contact_number;
+        profile.personal_email = req.body.personal_email;
+        profile.present_address = req.body.present_address;
+        profile.permanent_address = req.body.permanent_address;
+        await profile.save();
+        return res.status(200).json({
+            message:"Profile successfully updated."
+        })
+    }
+    catch(error){
+        return res.status(500).json({
+            message:"Something Went wrong."
+        })
+    }
+}
+const LoadProfileData = async(req,res)=>{
+    try{
+        let profileData = await Profile.findOne({employee_id:req.id});
+        return res.status(200).json({
+            profileData
+        })
+    }
+    catch(error){
+        return res.status(500).json({
+            message:"Something went wrong."
+        })
+    }
+}
 module.exports.addEmployee = addEmployee;
 module.exports.employeeList = employeeList;
 module.exports.userDetails = userDetails;
+module.exports.updateEmployeeProfile = updateEmployeeProfile;
+module.exports.LoadProfileData = LoadProfileData;

@@ -1,0 +1,76 @@
+const mongoose = require('mongoose');
+const {Schema,model} = mongoose;
+const profile = new Schema({
+    employee_id:{
+        type:String,
+        required:true,
+    },
+    first_name:{
+        type:String,
+        required:false,
+        default:null
+    },
+    last_name:{
+        type:String,
+        required:false,
+        default:null
+    },
+    NID:{
+        type:String,
+        required:false,
+        default:null
+    },
+    contact_number:{
+        type:String,
+        required: false,
+        default:null
+    },
+    emargency_contact_number:{
+        type:String,
+        required:false,
+        default:null
+    },
+    official_email:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    personal_email:{
+        type:String,
+        required:false,
+        unique:true,
+        default:null
+    },
+    role:{
+        type:String,
+        required:false,
+        default:null
+    },
+    employee_status:{
+        type:String,
+        required:false,
+        default:null
+    },
+    salary:{
+        type:String,
+        required:false,
+        default:null
+    },
+    joining_date:{
+        type:Date,
+        required:false,
+        default:null
+    },
+    present_address:{
+        type:String,
+        required:false,
+        default:null
+    },
+    permanent_address:{
+        type:String,
+        required:false,
+        default:null
+    }
+})
+
+module.exports = new model('Profile',profile);

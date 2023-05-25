@@ -1,4 +1,4 @@
-const Todo = require('../models/Todo.model');
+const Todo = require('../models/Task.model');
 const Employee = require('../models/Employee.model');
 const makeTodo = async (req,res)=>{
     const newTodo = new Todo({
