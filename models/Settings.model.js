@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const {Schema,model} = mongoose;
 const settings = new Schema({
     role:{
-        type:Array
+        type:Array,
+        default:[],
     },
     holiday:{
         type:Array

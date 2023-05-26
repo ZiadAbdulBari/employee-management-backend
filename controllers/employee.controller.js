@@ -71,12 +71,22 @@ const userDetails = async (req,res)=>{
 const updateEmployeeProfile = async(req,res)=>{
     try{
         const profile = await Profile.findOne({employee_id:req.id});
-        profile.NID = req.body.nid;
+        profile.employee_id = req.body.employee_id;
+        profile.first_name = req.body.first_name;
+        profile.last_name = req.body.last_name;
+        profile.last_name = req.body.last_name;
+        profile.NID = req.body.NID;
         profile.contact_number = req.body.contact_number;
         profile.emargency_contact_number = req.body.emargency_contact_number;
+        profile.official_email = req.body.official_email;
         profile.personal_email = req.body.personal_email;
+        profile.role = req.body.role;
+        profile.employee_status = req.body.employee_status;
+        profile.joining_date = req.body.joining_date;
         profile.present_address = req.body.present_address;
         profile.permanent_address = req.body.permanent_address;
+        // console.log(profile);
+        // return
         await profile.save();
         return res.status(200).json({
             message:"Profile successfully updated."

@@ -180,7 +180,7 @@
     "_id": "becc1ecd-0371-443a-a507-0b31d8561393",
     "colId": "history",
     "containerId": "",
-    "name": "{{url}}/employee/load-profile/",
+    "name": "load profile data",
     "url": "{{url}}/employee/load-profile/",
     "method": "GET",
     "sortNum": 0,

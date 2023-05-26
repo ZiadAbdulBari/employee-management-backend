@@ -1,17 +1,16 @@
 const Attendance = require('../models/Attendance.model');
 
-const checkIn = async (req,res)=>{
+const signon = async (req,res)=>{
     const enter = new Date();
     const startCounting = new Attendance({
         date:enter.toLocaleDateString(),
-        check_in:enter,
+        check_in:req.body.time,
         employee_id:req.id,
     })
     try{
-        let data = await startCounting.save();
-        console.log(data)
+        await startCounting.save();
         return res.status(200).json({
-            message:"Successfully checkin."
+            message:"Successfully signon."
         })
     }
     catch(error){
@@ -20,15 +19,16 @@ const checkIn = async (req,res)=>{
         })
     }
 }
-const checkOut = async (req,res)=>{
+const signoff = async (req,res)=>{
     try{
         const date = new Date();
         const todaysDate = date.toLocaleDateString();
         const todaysAttendance = await Attendance.findOne({employee_id:req.id,date:todaysDate});
-        todaysAttendance.check_out = date;
+        todaysAttendance.check_out = req.body.time;
         await todaysAttendance.save();
+        // console.log(todaysAttendance);
         return res.status(200).json({
-            message:"Seccessfully updated."
+            message:"Thnak you."
         })
     }
     catch(error){
@@ -38,6 +38,26 @@ const checkOut = async (req,res)=>{
     }
     
 }
+const getMonthlyAttendance = async(req,res)=>{
+    try{
+        const getAttendance = await Attendance.find({employee_id:req.id,
+            $expr: {
+              $and: [
+                { $eq: [{ $month: '$date' }, req.body.month] },
+                { $eq: [{ $year: '$date' }, req.body.year] }
+              ]
+            }
+          })
+        // console.log(getAttendance);
+        return res.status(200).json({
+            getAttendance
+        })
 
-module.exports.checkIn = checkIn;
-module.exports.checkOut = checkOut;
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+module.exports.signon = signon;
+module.exports.signoff = signoff;
+module.exports.getMonthlyAttendance = getMonthlyAttendance;

@@ -3,9 +3,9 @@ const {Schema,model} = mongoose;
 
 const attendance = new Schema({
     date:{
-        type:String,
-        required:true
-        // default:Date.now()
+        type:Date,
+        required:true,
+        // default:Date.now
     },
     check_in:{
         type: Date,
@@ -15,6 +15,11 @@ const attendance = new Schema({
         type: Date,
         required: false,
         default:'',
+    },
+    attendance_status:{
+        type:String,
+        required:false,
+        default:null
     },
     employee_id:{
         type: Schema.Types.ObjectId,
