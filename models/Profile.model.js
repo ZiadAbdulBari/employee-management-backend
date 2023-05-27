@@ -70,6 +70,11 @@ const profile = new Schema({
         type:String,
         required:false,
         default:null
+    },
+    dob:{
+        type:Date,
+        required:false,
+        default:null
     }
 })
 

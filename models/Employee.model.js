@@ -31,6 +31,11 @@ const employee= new Schema({
       required:false,
       default:" "
     },
+    joining_date:{
+      type:Date,
+      require:false,
+      default:' '
+    }
     // status:{
     //   type: Array,
     //   required:true,

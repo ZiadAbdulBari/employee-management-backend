@@ -9,6 +9,7 @@ const addEmployee = async (req,res)=>{
             email:req.body.email,
             role:req.body.role,
             salary:req.body.salary,
+            joining_date:req.body.joiningDate,
         })
         await newEmployee.save();
         const findEmail = await Employee.findOne({email:req.body.email});
@@ -85,6 +86,7 @@ const updateEmployeeProfile = async(req,res)=>{
         profile.joining_date = req.body.joining_date;
         profile.present_address = req.body.present_address;
         profile.permanent_address = req.body.permanent_address;
+        profile.dob = req.body.dob;
         // console.log(profile);
         // return
         await profile.save();

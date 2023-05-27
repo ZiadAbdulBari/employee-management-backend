@@ -48,6 +48,7 @@ const registration = async (req,res)=>{
             profileData.salary=newEmployee.salary;
             profileData.role=newEmployee.role;
             profileData.official_email=newEmployee.email;
+            profileData.joining_date=newEmployee.joining_date;
             await newEmployee.save();
         }
         const profile = new Profile(profileData);

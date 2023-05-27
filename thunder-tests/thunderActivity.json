@@ -33,12 +33,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-05-12T08:12:18.651Z",
-    "modified": "2023-05-24T02:21:33.975Z",
+    "modified": "2023-05-27T06:11:40.811Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\": \"cagivop430@farebus.com\",\n  \"password\": \"Admin\"\n}",
+      "raw": "{\n  \"email\": \"z@z.com\",\n  \"password\": \"Admin\"\n}",
       "form": []
     },
     "tests": []
@@ -193,6 +193,97 @@
       }
     ],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "f6ee456f-467a-47fe-9897-923cb7248cb7",
+    "colId": "history",
+    "containerId": "",
+    "name": "settings",
+    "url": "{{url}}/settings/get-settings/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-27T06:10:25.191Z",
+    "modified": "2023-05-27T06:12:00.084Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmYzZTc5OGJiNDNjMTczZjhkMTBhOCIsImVtYWlsIjoiekB6LmNvbSIsImlhdCI6MTY4NTE2NzkwMH0._W6nikUMInkM9OHSXOVxy88cSp-XOrYtajgXwYmnhZA"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "4aef3d8d-fa30-4e3a-a74b-30fd43218ab4",
+    "colId": "history",
+    "containerId": "",
+    "name": "add role",
+    "url": "{{url}}/settings/add-role/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-27T07:54:00.764Z",
+    "modified": "2023-05-27T08:15:45.333Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmYzZTc5OGJiNDNjMTczZjhkMTBhOCIsImVtYWlsIjoiekB6LmNvbSIsImlhdCI6MTY4NTE2NzkwMH0._W6nikUMInkM9OHSXOVxy88cSp-XOrYtajgXwYmnhZA"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"role\":\"HR\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c0f22c05-9f93-46ba-a445-a23fe29cf151",
+    "colId": "history",
+    "containerId": "",
+    "name": "add project",
+    "url": "{{url}}/settings/add-project/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-27T08:25:24.124Z",
+    "modified": "2023-05-27T08:25:42.347Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmYzZTc5OGJiNDNjMTczZjhkMTBhOCIsImVtYWlsIjoiekB6LmNvbSIsImlhdCI6MTY4NTE2NzkwMH0._W6nikUMInkM9OHSXOVxy88cSp-XOrYtajgXwYmnhZA"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"project\":\"Test-1\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "1b18fef0-9025-4b25-a801-4d1408902bae",
+    "colId": "history",
+    "containerId": "",
+    "name": "add status",
+    "url": "{{url}}/settings/add-employee-status/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-27T08:35:20.884Z",
+    "modified": "2023-05-27T08:35:20.884Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmYzZTc5OGJiNDNjMTczZjhkMTBhOCIsImVtYWlsIjoiekB6LmNvbSIsImlhdCI6MTY4NTE2NzkwMH0._W6nikUMInkM9OHSXOVxy88cSp-XOrYtajgXwYmnhZA"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"status\":\"Brobation\"\n}",
+      "form": []
+    },
     "tests": []
   }
 ]

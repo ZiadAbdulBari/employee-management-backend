@@ -31,7 +31,8 @@ const updateTodo = async (req,res)=>{
             })
         }
         else if(selectedTodo.start_time!=null && selectedTodo.finish_time==null){
-            selectedTodo.start_time = req.body.time;
+            console.log("sdff")
+            selectedTodo.finish_time = req.body.time;
             selectedTodo.is_done = true;
             await selectedTodo.save();
             return res.status(200).json({

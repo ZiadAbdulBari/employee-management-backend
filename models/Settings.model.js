@@ -6,19 +6,24 @@ const settings = new Schema({
         default:[],
     },
     holiday:{
-        type:Array
+        type:Array,
+        default:[]
     },
     start_time:{
-        type:Date
+        type:Date,
+        default:null
     },
     end_time:{
-        type:Date
+        type:Date,
+        default:null
     },
     project:{
-        type:Array
+        type:Array,
+        default:[]
     },
     employee_status:{
-        type:Array
+        type:Array,
+        default:[]
     }
 })
 
