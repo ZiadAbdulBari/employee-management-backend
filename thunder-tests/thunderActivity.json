@@ -285,5 +285,65 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "10ac27a9-3ed0-4dda-a22f-c0c1d6572881",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{url}}/employee/filter/?role=Admin&joining_date=null",
+    "url": "{{url}}/employee/filter/?role=Admin&joining_date=null",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-06-01T04:06:42.009Z",
+    "modified": "2023-06-01T04:06:42.009Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzM2YmRiYzM0MzJhZWI2NDFiZjliMCIsImVtYWlsIjoiekB6LmNvbSIsImlhdCI6MTY4NTU5MjM3NH0.WV0L4QZaETst5ICXx799RivWS9R-587x_dVUOYwRTGw"
+      }
+    ],
+    "params": [
+      {
+        "name": "role",
+        "value": "Admin",
+        "isPath": false
+      },
+      {
+        "name": "joining_date",
+        "value": "null",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "da92c156-0ada-48c7-a9a1-2bf80e74a18c",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{url}}/employee/filter/?role=Admin&joining_date=false",
+    "url": "{{url}}/employee/filter/?role=Admin&joining_date=false",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-06-01T04:08:15.127Z",
+    "modified": "2023-06-01T04:08:15.127Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzM2YmRiYzM0MzJhZWI2NDFiZjliMCIsImVtYWlsIjoiekB6LmNvbSIsImlhdCI6MTY4NTU5MjM3NH0.WV0L4QZaETst5ICXx799RivWS9R-587x_dVUOYwRTGw"
+      }
+    ],
+    "params": [
+      {
+        "name": "role",
+        "value": "Admin",
+        "isPath": false
+      },
+      {
+        "name": "joining_date",
+        "value": "false",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]

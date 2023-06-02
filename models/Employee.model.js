@@ -4,17 +4,17 @@ const employee= new Schema({
     employee_id: {
       type: String,
       required:false,
-      default:"",
+      default:null,
     },
     first_name: {
       type: String,
       required:false,
-      default:" ",
+      default:null,
     },
     last_name: {
       type: String,
       required:false,
-      default:" ",
+      default:null,
     },
     email:{
       type: String,
@@ -24,17 +24,17 @@ const employee= new Schema({
     role:{
       type: String,
       required:false,
-      default:" ",
+      default:null,
     },
     salary:{
       type: String,
       required:false,
-      default:" "
+      default:null
     },
     joining_date:{
       type:Date,
       require:false,
-      default:' '
+      default:null
     }
     // status:{
     //   type: Array,

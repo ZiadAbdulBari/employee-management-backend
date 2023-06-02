@@ -30,12 +30,12 @@ const registration = async (req,res)=>{
             const saveAdmin = new Employee({
                 employee_id:newUser._id,
                 email: email,
-                role:'admin',
+                role:'Admin',
 
             })
             profileData.employee_id = newUser._id;
             profileData.official_email = email;
-            profileData.official_email = 'admin';
+            profileData.role = 'Admin';
             await saveAdmin.save();
         }
         else{
